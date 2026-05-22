@@ -1,0 +1,26 @@
+include_keywords:
+  - 수급자
+  - 주거급여
+  - 전세임대
+  - 매입임대
+  - 행복주택
+  - 국민임대
+  - 장기전세
+  - 청년
+  - 신혼
+  - 차상위
+  - 주거취약
+
+exclude_keywords:
+  - 상가
+  - 토지
+  - 분양
+  - 매각
+  - 입찰
+
+sources:
+  - agency: LH
+    url: https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026
+
+  - agency: SH
+    url: https://housing.seoul.go.kr/site/main/sh/publicLease/07/list
