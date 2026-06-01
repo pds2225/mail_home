@@ -44,17 +44,20 @@ class Notice:
 
 
 def load_dotenv(path: Path = ENV_PATH) -> None:
-    if not path.exists():
-        return
-    for line in path.read_text(encoding="utf-8").splitlines():
-        line = line.strip()
-        if not line or line.startswith("#") or "=" not in line:
+    # 공유 .env 먼저 로드 (없으면 스킵)
+    _shared = Path(r"D:\.env.shared")
+    for _p in [_shared, path]:
+        if not _p.exists():
             continue
-        key, value = line.split("=", 1)
-        key = key.strip()
-        value = value.strip().strip('"').strip("'")
-        if key and key not in os.environ:
-            os.environ[key] = value
+        for line in _p.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            key = key.strip()
+            value = value.strip().strip('"').strip("'")
+            if key and key not in os.environ:
+                os.environ[key] = value
 
 
 def load_config() -> Dict[str, Any]:
