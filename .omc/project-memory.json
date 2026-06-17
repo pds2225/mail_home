@@ -1,0 +1,76 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1781254102016,
+  "projectRoot": "D:\\mail_home",
+  "techStack": {
+    "languages": [
+      {
+        "name": "Python",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "requirements.txt"
+        ]
+      }
+    ],
+    "frameworks": [],
+    "packageManager": "pip",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "__pycache__": {
+      "path": "__pycache__",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1781254101941,
+      "keyFiles": [
+        "monitor_housing.cpython-313.pyc",
+        "monitor_housing.cpython-314.pyc"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "README.md",
+      "accessCount": 1,
+      "lastAccessed": 1781254194577,
+      "type": "file"
+    },
+    {
+      "path": "monitor_housing.py",
+      "accessCount": 1,
+      "lastAccessed": 1781254215842,
+      "type": "file"
+    },
+    {
+      "path": "config.yaml",
+      "accessCount": 1,
+      "lastAccessed": 1781254215920,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

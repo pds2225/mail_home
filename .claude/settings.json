@@ -1,0 +1,117 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|compact|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\ekth3\\.claude\\skills\\session-resume-auto\\scripts\\resume_restore.py\""
+          }
+        ]
+      },
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\ekth3\\.claude\\skills\\session-guard\\scripts\\guard_session_start.py\""
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "manual|auto",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\ekth3\\.claude\\skills\\session-resume-auto\\scripts\\resume_presave.py\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\ekth3\\.claude\\skills\\session-resume-auto\\scripts\\resume_tick.py\""
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\ekth3\\.claude\\skills\\session-resume-auto\\scripts\\resume_prompt.py\""
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\ekth3\\.claude\\skills\\session-guard\\scripts\\guard_prompt.py\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "^(Workflow|Agent|Bash|PowerShell)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\ekth3\\.claude\\skills\\session-resume-auto\\scripts\\resume_bg_log.py\""
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\ekth3\\.claude\\skills\\session-resume-auto\\scripts\\resume_session_end.py\""
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\ekth3\\.claude\\skills\\session-guard\\scripts\\guard_session_end.py\""
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\ekth3\\.claude\\skills\\session-guard\\scripts\\guard_preedit.py\""
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\ekth3\\.claude\\skills\\session-guard\\scripts\\guard_pregit.py\""
+          }
+        ]
+      }
+    ]
+  }
+}
